@@ -11,3 +11,5 @@
 - Permutacions i cicles
 - Col·lecció de paraules
 - El cavall afamat
+
+Si algú els té fets i els vol afegir l'estimarem molt :purple_heart: :yellow_heart:
