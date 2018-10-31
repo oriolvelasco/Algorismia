@@ -1,3 +1,5 @@
+```diff
+- Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
 -Permutacions i cicles (1)
