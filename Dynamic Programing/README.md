@@ -2,10 +2,7 @@
 - Atenció!! Llista incompleta
 ```
 # Falten els següents problemes d'aquesta llista
-- Robotic Bullfighting
 - Fibonacci Numbers (1)
-- Mariano and Luisito
-- Common scores
 - The one of the greatest common subword
 - The one of the edition distance (I)
 - The one of the edition distance (II)
