@@ -1,5 +1,5 @@
 ```diff
-- ## Atenció!! Llista incompleta
+- Atenció!! Llista incompleta
 ```
 # Falten els següents problemes d'aquesta llista
 - Torres dins un rectangle
