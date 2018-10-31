@@ -1,4 +1,5 @@
-PROBLEMES QUE FALTEN
+```
+#PROBLEMES QUE FALTEN
 -Permutacions i cicles (1)
 -Bombers i iaies (2)
 -Permutacions i cicles (2)
