@@ -2,6 +2,7 @@
 - Atenció!! Llista incompleta
 ```
 # Falten els següents problemes d'aquesta llista
+- Fibonacci numbers (1)
 - El joc del Nim
 - Ranking AVL trees
 - Bags and boxes
