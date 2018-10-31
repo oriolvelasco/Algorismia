@@ -1,6 +1,3 @@
-// Nombres de Fibonacci amb PD.
-
-
 #include <iostream>
 #include <vector>
 using namespace std;
