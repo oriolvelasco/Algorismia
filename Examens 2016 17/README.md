@@ -1,3 +1,7 @@
+```diff
+- Atenció!! Llista incompleta
+```
+# PROBLEMES QUE FALTEN
 -Omplint amb rajoles
 -Permutacions lletges
 -Seqüències lletges
