@@ -1,5 +1,3 @@
-// Suma cantonades subrectangles
-
 #include <iostream>
 #include <vector>
 using namespace std;
