@@ -1,6 +1,9 @@
-PROGRAMES QUE FALTEN
--Sense consonants consecutives
--Retallades
--Piscina(2)
--Separació òptima
--Mediana dinàmica
+```diff
+- Atenció!! Llista incompleta
+```
+# PROGRAMES QUE FALTEN
+- Sense consonants consecutives
+- Retallades
+- Piscina(2)
+- Separació òptima
+- Mediana dinàmica
