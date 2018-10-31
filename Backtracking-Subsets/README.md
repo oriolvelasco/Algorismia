@@ -1,4 +1,3 @@
-## Problemes restants
-### Ens falten els següents problemes.... Si en tens algún i vols aportar-lo t'estimarem
-- 
+### Aquesta llista està completa!! 
+- En principi, els problemes penjats són d'usuaris diversos, però tenen tots veredicte (AC). Si detecteu que en algun cas no és així, sisplau feu-nos-ho saber!!
   
