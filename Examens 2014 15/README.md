@@ -2,8 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Dues monedes de cada(2)
-- Cost mínim de parentitzar correctament(1)
 - Sadisme
 - Cost mínim de parentitzar correctament(2)
 - Clausura transitiva
