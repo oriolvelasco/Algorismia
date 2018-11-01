@@ -1,21 +1,19 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
-typedef long long L;
-typedef vector<L> VL;
-VL F;
-int n, m;
-
-int fibonacci(int n, int m){
-    if (F[n] != -1) return F[n]%m;
-    if (n <= 1) return F[n] = n;
-    return F[n] = fibonacci(n-1,m)%m + fibonacci(n-2,m)%m;
-}
+int n,m;
+using VI = vector<int>;
 
 int main(){
-    while (cin >> n >> m){
-        F = VL(n+1,-1);
-        cout << fibonacci(n,m)%m << endl;
+    while(cin>>n>>m){
+        VI fibonacci(1001);
+        fibonacci[0]=0;
+        fibonacci[1]=1;
+        for(int i=2; i<n+1; i++){
+            fibonacci[i]=(fibonacci[i-1]+fibonacci[i-2])%m;
+        }
+        cout<<fibonacci[n]<<endl;
     }
 }
