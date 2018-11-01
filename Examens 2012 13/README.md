@@ -6,7 +6,7 @@
 - Aparellament màxim
 - Motxilla amb pesos i valors
 - Rifa de nadal
-- Dijkstra, que tal
+- Dijkstra, tal qual
 - Permutacions i cicles
 - Col·lecció de paraules
 - El cavall afamat
