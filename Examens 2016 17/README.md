@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Permutacions lletges
 - Seqüències lletges
 - Camí més llarg
 - Retoladors
