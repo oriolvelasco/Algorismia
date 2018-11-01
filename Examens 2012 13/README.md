@@ -5,7 +5,6 @@
 - Dues files de nombres
 - Aparellament màxim
 - Rifa de nadal
-- Dijkstra, tal qual
 - Col·lecció de paraules
 - El cavall afamat
 
