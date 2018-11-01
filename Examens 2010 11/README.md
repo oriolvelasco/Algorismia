@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Pintant un tauler
 - Una benzinera massa llunyana
 - Jugant amb números
 - Nombre de camins mínims
