@@ -2,34 +2,29 @@
 #include <vector>
 using namespace std;
 
-typedef vector<int> Vec;
-
 int n;
-Vec V;
+vector<int> v;
 
-void escriu() {
-	cout << V[0];
-	for(int i = 1; i < V.size(); ++i) {
-		cout << " " << V[i];
-	}
-	cout << endl;
+void write(const vector<int>& w) {
+    int m = w.size();
+    for (int i = 0; i < m; ++i) {
+        if (i != 0) cout << " ";
+        cout << w[i];
+    }
+    cout << endl;
 }
 
-void f(int p) {
-	if (p==n) {
-		escriu();
-		return;
-	}
-
-	V[p] = 0;
-	f(p+1);
-	V[p] = 1;
-	f(p+1);
+void zeros(int i) {
+    if (i == n) {
+        write(v);
+    } else {
+        v[i] = 0; zeros(i + 1);
+        v[i] = 1; zeros(i + 1);
+    }
 }
 
 int main() {
-	cin >> n;
-	V = Vec(n);
-	f(0);
-	
+    cin >> n;
+    v = vector<int> (n);
+    zeros(0);
 }
