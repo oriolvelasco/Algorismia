@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Aparellament màxim
 - Rifa de nadal
 - Col·lecció de paraules
 - El cavall afamat
