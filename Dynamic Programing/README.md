@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # Falten els següents problemes d'aquesta llista
-- El joc del Nim
 - Ranking AVL trees
 - Escape from Leng
 - Lluita de rol
