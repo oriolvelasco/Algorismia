@@ -4,7 +4,6 @@
 # PROBLEMES QUE FALTEN
 - Dues files de nombres
 - Aparellament màxim
-- Motxilla amb pesos i valors
 - Rifa de nadal
 - Dijkstra, tal qual
 - Col·lecció de paraules
