@@ -7,7 +7,6 @@
 - Motxilla amb pesos i valors
 - Rifa de nadal
 - Dijkstra, tal qual
-- Permutacions i cicles
 - Col·lecció de paraules
 - El cavall afamat
 
