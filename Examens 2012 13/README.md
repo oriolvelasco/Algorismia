@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Camins hamiltonians
 - Dues files de nombres
 - Aparellament màxim
 - Motxilla amb pesos i valors
