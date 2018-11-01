@@ -15,12 +15,12 @@ Taula T;
 TaulaChar M;
 int n, m;
 
-
+const int UNDEF = -1;
 
 int f(int i, int j) {
   if(i < 0 or j < 0) return 0;
 
-  if (T[i][j] != -1) return T[i][j];
+  if (T[i][j] != UNDEF) return T[i][j];
   if (M[i][j] == 'X') return T[i][j] = 0;
   if (i == 0 and j == 0) return T[i][j] = 1;
 
@@ -34,7 +34,7 @@ int f(int i, int j) {
 int main() {
   while(cin >> n >> m and n + m > 0) {
     M = TaulaChar(n, C(m));
-    T = Taula(n, V(m, -1));
+    T = Taula(n, V(m, UNDEF));
 
     for (int i = 0; i < n; ++i) {
       for (int j = 0; j < m; ++j) cin >> M[i][j];
