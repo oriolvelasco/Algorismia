@@ -1,78 +1,51 @@
 #include <iostream>
-#include <string>
 #include <vector>
 using namespace std;
 
-typedef vector<int> Vec;
+using VE = vector<int>;
+using VB = vector<bool>;
 
-int s, n, suma, total;
-Vec V, posats, suma_parcial;
+int n, S;
+VE els;
+VB cont;
 
-void escriu() {
+void write_subset() {
+    bool first = true;
     cout << "{";
-    int j = 0;
-    bool primer = true;
-
-    while (posats[j] == 0 and j <= n) {
-        ++j;
-    }
-    
-    if(j >= n) {
-        cout << "}" << endl;
-        return;
-    }
-    
-    while(j < n) {
-        if(posats[j]) {
-            if(not primer) cout << ",";
-            primer = false;
-            cout << V[j];
+    for (int i = 0; i < n; ++i) {
+        if (cont[i]) {
+            if (first) first = false;
+            else cout << ",";
+			
+            cout << els[i];
         }
-        ++j;
     }
-    cout << "}" << endl;
+    cout << "}";
+    cout << endl;
 }
 
-void f(int p) {
-    if(suma > s) return;
-    int queda = suma_parcial[n]-suma_parcial[p];
-    if(queda+suma < s) return;
-
-    if (p == n and suma == s) {
-        escriu();
-        return;
+void rec(int s, int i, bool new_el, int total) {
+    if (s > S) return;
+    if (s + total < S) return;
+    if (s == S and new_el) write_subset();
+    
+    if (i < n) {
+        total -= els[i];
+        cont[i] = true; rec(s + els[i], i + 1, true, total);
+        cont[i] = false; rec(s, i + 1, false, total);
     }
-    
-    if(p==n) return;
-    
-    f(p+1);
-    
-    suma += V[p];
-    posats[p] = true;
-    f(p+1);
-    
-    suma -= V[p];
-    posats[p] = false;
-
 }
 
 int main() {
-    cin >> s >> n;
-    V = Vec(n);
-    posats = Vec(n, false);
-    suma_parcial = Vec(n+1, 0);
-    suma = 0;
-    total = 0;
-    
-    for(int i = 0; i < n; ++i) {
-        cin >> V[i];
-
-        for(int j = 0; j < i; ++j) {
-            suma_parcial[i] += V[j];
-        }
+    cin >> S >> n;
+    els = VE(n);
+    cont = VB(n);
+	
+    int total = 0;
+    for (int& e : els) {
+        cin >> e;
+        total += e;
     }
 
-    suma_parcial[n] = suma_parcial[n-1] + V[n-1];
-    
-    f(0);
+    rec(0, 0, true, total);
 }
