@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Apagant bombetes
 - Pseudo-seqüències de Collatz(2)
 - Dos colors
 - Sistemes d'equacions simbòliques
