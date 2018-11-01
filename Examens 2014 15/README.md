@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Dues monedes de cada(1)
 - Alguns camins Hamiltonians
 - Dues monedes de cada(2)
 - Cost mínim de parentitzar correctament(1)
