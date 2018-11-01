@@ -14,7 +14,7 @@ void write_partition() {
         cout << "subset " << j + 1 << ": ";
         cout << "{";
 		
-		bool first = true;
+	bool first = true;
         for (int i = 0; i < n; ++i) {
             if (contained[i] == j) {
                 if (first) first = false;
@@ -44,7 +44,7 @@ void allperms(int i) {
 int main() {
     cin >> n;
     set = VS(n);
-	contained = VE(n);
+    contained = VE(n);
 	
     for (string& e : set) cin >> e;
     cin >> p;
