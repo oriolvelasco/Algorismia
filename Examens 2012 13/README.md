@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Dues files de nombres
 - Aparellament màxim
 - Rifa de nadal
 - Col·lecció de paraules
