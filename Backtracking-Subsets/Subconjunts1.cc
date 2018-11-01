@@ -1,55 +1,45 @@
 #include <iostream>
-#include <string>
 #include <vector>
+#include <string>
 using namespace std;
 
-typedef vector<int> Vec;
-typedef vector<string> SVec;
+using VB = vector<bool>;
+using VS = vector<string>;
 
 int n;
-Vec V;
-SVec S;
+VS llista;
+VB contained;
 
-void escriu() {
-    cout << "{";
-    int j = 0;
-    
-    while (not V[j] and j <= n) {
-        ++j;
-    }
-    
-    if(j == n) {
-        cout << "}" << endl;
-        return;
-    }
-    
-    cout << S[j];
-	
-    for(int i = j+1; i < V.size(); ++i) if(V[i]) cout << "," << S[i];
-    
-    cout << "}" << endl;
-	
-	
+void print_subset() {
+	bool first = true;
+	cout << "{";
+	for (int i = 0; i < n; i++) {
+		if (contained[i]) {
+			if (first) first = false;
+			else cout << ",";
+			
+			cout << llista[i];
+		}
+	}
+	cout << "}" << endl;
 }
 
-void f(int p) {
-	if (p==n) {
-		escriu();
-		return;
+void allperms(int i) {
+	if (i == n) {
+		print_subset();
+	} else {
+		contained[i] = false; allperms(i + 1);
+		contained[i] = true; allperms(i + 1);
 	}
-
-	V[p] = 0;
-	f(p+1);
-	V[p] = 1;
-	f(p+1);
 }
 
 int main() {
 	cin >> n;
-    V = Vec(n);
-    S = SVec(n);
-    
-    for(int i = 0; i < n; ++i) cin >> S[i];
 	
-	f(0);
+	contained = VB(n);
+	llista = VS(n);
+	
+	for (string& e : llista) cin >> e;
+	allperms(0);
 }
+
