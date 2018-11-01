@@ -1,62 +1,49 @@
 #include <iostream>
-#include <string>
 #include <vector>
+#include <string>
 using namespace std;
 
-typedef vector<int> Vec;
-typedef vector<string> SVec;
+using VB = vector<bool>;
+using VS = vector<string>;
 
-int n, m;
-Vec V;
-SVec S;
+int n;
+VS llista;
+VB contained;
 
-void escriu() {
-    cout << "{";
-    int j = 0;
-    
-    while (not V[j] and j <= n) {
-        ++j;
-    }
-    
-    if(j == n) {
-        cout << "}" << endl;
-        return;
-    }
-    
-    cout << S[j];
-	
-    for(int i = j+1; i < V.size(); ++i) if(V[i]) cout << "," << S[i];
-    
-    cout << "}" << endl;
-	
-	
+void print_subset() {
+	bool first = true;
+	cout << "{";
+	for (int i = 0; i < n; i++) {
+		if (contained[i]) {
+			if (first) first = false;
+			else cout << ","; 
+			cout << llista[i];
+		}
+	}
+	cout << "}" << endl;
 }
 
-void f(int p, int posats) {
-	if (p==n and posats == m) {
-		escriu();
-		return;
+void allperms(int i, int r) {
+	if (r < 0) return;
+	// Espais que queden menors als uns que ens falta posar
+	if (n - i < r) return;
+	
+	if (i == n) {
+		if (r == 0) print_subset();
+	} else {
+		contained[i] = false; allperms(i + 1, r);
+		contained[i] = true; allperms(i + 1, r - 1);
 	}
-    
-    if(p==n) return;
-    
-    if(p-posats < n-m) {
-        V[p] = 0;
-        f(p+1, posats);
-    }
-    
-    if(posats < m) {
-        V[p] = 1;
-        f(p+1, posats+1);
-    }
 }
 
 int main() {
-	cin >> m >> n;
-    V = Vec(n);
-    S = SVec(n);
-    
-    for(int i = 0; i < n; ++i) cin >> S[i];
+	int r;
+	cin >> r >> n;
 	
-	f(0,0);
+	contained = VB(n);
+	llista = VS(n);
+	
+	for (string& e : llista) cin >> e;
+	allperms(0, r);
 }
+
