@@ -1,54 +1,42 @@
 #include <iostream>
-#include <string>
 #include <vector>
+
 using namespace std;
 
-typedef vector<int> Vec;
 
 int n;
-Vec V, posats;
+vector<bool> VN;
+vector<int> VE;
 
-void escriu() {
-    cout << "(";
-    bool primer = true;
 
-    cout << V[0]+1;
-    
-   for (int i = 1; i < n; ++i) cout << "," << V[i]+1;
-   
-    cout << ")" << endl;
+void escriu(){
+    vector<int> cicle(n, VE[0]);
+    for (int j = 1; j < n - 1; ++j) cicle[VE[j - 1] - 1] = VE[j];
+    cicle[VE[n - 2] - 1] = 1;
+    cout << '(' << cicle[0];
+    for (int i = 1; i < n; ++i) {
+        cout << ',' << cicle[i];
+    }
+    cout << ')' << endl;
 }
 
-void f(int p, int k, int cicles) {
-    if(V[k] != -1) ++cicles;
-
-    if(cicles >= 2) return;
-    if(p == n) return escriu();
-
-    if(V[k] != -1) {
-        for (int i = 0; i < n; ++i) {
-            if (V[i] == -1) return f(p, i, cicles);
+void comb(int k) {
+    if (k == n - 1) escriu();
+    for (int i = 0; i < n - 1; ++i) {
+        if(not VN[i]) {
+            VN[i] = 1;
+            VE[k] = i + 2;
+            comb(k + 1);
+            VN[i] = 0;
         }
     }
-
-
-    for (int i = 0; i < n; ++i) {
-        if(not posats[i]) {
-            //cout << i << " " << k << " " << posats[i] << " " << cicles << endl;
-            V[k] = i;
-            posats[i] = true;
-            f(p+1, i, cicles);
-            posats[i] = false;
-            V[k] = -1;
-        }
-    }
-
 }
 
-int main() {
+//buscarem les permutacions de (2,...,n) perquè estan en bijecció amb els n-cicles
+int main(){
     cin >> n;
-    V = Vec(n, -1);
-    posats = Vec(n, false);
-    
-    f(0,0,0);
+    VN = vector<bool>(n - 1, 0);
+    VE = vector<int>(n - 1, 1);
+    if (n == 1) cout << "(1)" << endl;
+    else comb(0);
 }
