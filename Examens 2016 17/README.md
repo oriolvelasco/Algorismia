@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Seqüències lletges
 - Camí més llarg
 - Retoladors
 - Xarxa de carreteres
