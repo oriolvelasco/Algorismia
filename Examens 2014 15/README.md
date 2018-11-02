@@ -3,7 +3,6 @@
 ```
 # PROBLEMES QUE FALTEN
 - Sadisme
-- Cost mínim de parentitzar correctament(2)
 - Clausura transitiva
 - K-èssim element
 - Traducció automàtica
