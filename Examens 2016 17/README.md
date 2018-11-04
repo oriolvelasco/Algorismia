@@ -3,7 +3,6 @@
 ```
 # PROBLEMES QUE FALTEN
 - Camí més llarg
-- Retoladors
 - Xarxa de carreteres
 - Dues festes
 
