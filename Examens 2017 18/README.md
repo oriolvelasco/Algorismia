@@ -3,7 +3,6 @@
 ```
 # PROBLEMES QUE FALTEN
 - Subconjunts tranquils
-- Nombres k-xulos
 - Millor que Dijkstra
 - Mediana dinàmica
 
