@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # Falten els següents problemes d'aquesta llista
-- Weighted shortest path (4)
 - Much more efficiently, please!
 - Global firefighters
 - Friend numbers
