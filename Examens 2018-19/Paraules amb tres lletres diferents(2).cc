@@ -39,4 +39,3 @@ int main() {
     int n, a, b, c;
     while (cin >> n >> a >> b >> c) cout << dp[n][a][b][c] << endl;
 }
-Jutge.org 
