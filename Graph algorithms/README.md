@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # Falten els següents problemes d'aquesta llista
-- Much more efficiently, please!
 - Global firefighters
 - Friend numbers
 - Minimizing the cost of a graph
