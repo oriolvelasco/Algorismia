@@ -4,7 +4,6 @@
 # PROBLEMES QUE FALTEN
 - Escrivint piles
 - Simulant recursivitat (1)
-- Simulant recursivitat (2)
 - Biblioteca
 - Comprovant parèntesis
 - Notació polonesa inversa
