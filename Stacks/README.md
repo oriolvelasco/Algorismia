@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Escrivint piles
 - Simulant recursivitat (1)
 - Biblioteca
 - Comprovant parèntesis
