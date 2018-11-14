@@ -2,8 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Inversió separada amb piles
-- Palíndroms amb piles
 - Escrivint piles
 - Simulant recursivitat (1)
 - Simulant recursivitat (2)
