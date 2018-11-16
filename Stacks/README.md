@@ -2,8 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Simulant recursivitat (1)
-- Biblioteca
 - Comprovant parèntesis
 - Notació polonesa inversa
 
