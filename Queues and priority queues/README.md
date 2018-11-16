@@ -3,7 +3,6 @@
 ```
 # PROBLEMES QUE FALTEN
 - Mesures estadístiques
-- Col·lecció de números
 - Radix sort
 - Codis de Huffman
 - Replicants' IDs
