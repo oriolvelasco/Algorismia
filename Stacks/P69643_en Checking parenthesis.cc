@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stack>
-#include <sstream>
 using namespace std;
 
 //P69643_en
@@ -9,11 +8,10 @@ using namespace std;
 int main() {
     string p;
     while (cin >> p) {
-        stringstream ss(p);
         stack<char> S;
-        char c;
         bool ok = true;
-        while (ss >> c and ok) {
+        for (int i = 0; i < p.size() and ok; ++i) {
+            char c = p[i];
             if (c == ')' or c == ']') {
                 if (S.empty()) ok = false;
                 else if (c == ')') {
