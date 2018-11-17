@@ -39,7 +39,7 @@ int main() {
         }
         //We cannot delete if Q is empty
         else if (Q.empty()) print(false);
-        else { //We delete so the queue is empty
+        else { //delete
             int x = Q.top();
             aver += x;
             Q.pop();
