@@ -4,7 +4,6 @@
 # Falten els següents problemes d'aquesta llista
 - Friend numbers
 - Minimizing the cost of a graph
-- Subgraph isomorphism
 - Old pals
 - Old teletext
 - The cask of amontillado
