@@ -4,30 +4,27 @@ using namespace std;
 
 //P69643_en
 //Checking parenthesis
+string p;
+
+bool parenthesis(stack<char>& S) {
+    for (int i = 0; i < p.size(); ++i) {
+        char c = p[i];
+        if (c == ')' or c == ']') {
+            if (S.empty()) return false;
+            char d = S.top();
+            S.pop();
+            if ((c == ')' and d != '(') or (c == ']' and d != '[')) return false;
+        }
+        else S.push(c);
+    }
+    if (S.empty()) return true;
+    return false;
+}
 
 int main() {
-    string p;
     while (cin >> p) {
         stack<char> S;
-        bool ok = true;
-        for (int i = 0; i < p.size() and ok; ++i) {
-            char c = p[i];
-            if (c == ')' or c == ']') {
-                if (S.empty()) ok = false;
-                else if (c == ')') {
-                    if (S.top() == '(') S.pop(); // () are canceled
-                    else if (S.top() == '[') ok = false; //Not possible [)
-                    else S.push(c);
-                }
-                else {
-                    if (S.top() == '[') S.pop(); // [] are canceled
-                    else if (S.top() == '(') ok = false; //Not possible (]
-                    else S.push(c);
-                }
-            }
-            else S.push(c);
-        }
-        if (not S.empty() or not ok) cout << p << " is incorrect" << endl;
-        else cout << p << " is correct" << endl;
+        if (parenthesis(S)) cout << p << " is correct" << endl;
+        else cout << p << " is incorrect" << endl;
     }
 }
