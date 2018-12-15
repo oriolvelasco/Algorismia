@@ -5,65 +5,68 @@
 #include <vector>
 using namespace std;
 
-typedef vector<int> V;
-typedef vector<V> Taula;
-typedef vector<char> C;
-typedef vector<C> TaulaChar;
+typedef vector<int> VI;
+typedef vector<VI> MI;
 
+MI res;
+int NMAX = 500;
 
-Taula M;
-int n, m;
+int FSIZE = 0;
+int ISIZE = 0;
 
-V valors;
-
-const int lletres = 26;
-
-
-
-int ompleValors(int i) {
-  if(valors[i] != 0) return valors[i];
-
-  if(i == 0) {
-    valors[i] = 1;
-    return valors[i];
-  }
-  
-  valors[i] = i+1 + ompleValors(i-1);
-
-  return valors[i]; 
+bool inbounds(int i, int j) {
+	return i >= 0 and j >= 0 and i <= ISIZE and j < FSIZE;
 }
 
+int corners(int i, int j) {
+	int sum = 0;
+	if (inbounds(i, j - 1)) sum += res[i][j - 1];
+	if (inbounds(i - 1, j)) sum += res[i - 1][j];
+	if (inbounds(i - 1, j - 1)) sum -= res[i - 1][j - 1];
+	return sum;
+}
+
+// Use: 1 + ... + n = n*(n+1)/2
+int getval(char c) {
+	int n = c - 'A' + 1;
+	return n*(n+1)/2;
+}
+
+void print_matrix(const MI& A, int n, int m) {
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			if (j > 0) cout << " ";
+			cout << A[i][j]; 
+		}
+		cout << endl;
+	}
+}
 
 int main() {
-  valors = V(lletres, 0);
-  int k = ompleValors('Z'-'A');
-  V fila;
-
-
-  string ubec;
-  while(getline(cin, ubec)) {
-    int n = M.size();
-    if(n == 0) fila = V(ubec.size(), 0);
-    else fila = M[n-1];
-
-    for (int i = 0; i < ubec.size(); ++i) {
-      fila[i] += valors[ubec[i] - 'A'];
-      if(i > 0) {
-        fila[i] += fila[i-1];
-        if(n > 0) fila[i] -= M[n-1][i-1];
-      }
-        
-    }
-
-    M.push_back(fila);
-  }
-
-  for (int i = 0; i < M.size(); ++i) {
-    for (int j = 0; j < M[0].size(); ++j) {
-      cout << M[i][j];
-      if(j != M[0].size() -1) cout << " ";
-    }
-    cout << endl;
-  }
-
+	string f;
+		
+	// Set empty matrix
+	res = MI (0, VI (0));
+	
+	while (cin >> f) {
+		// Set the matrix
+		if (res.size() == 0) {
+			FSIZE = f.size();
+			res = MI (NMAX, VI (FSIZE, 0));
+		}
+		
+		// For each character in f
+		// add it to the last row of the matrix
+		int j = 0;
+		for (char c : f) {
+			res[ISIZE][j] = getval(c);
+			res[ISIZE][j] += corners(ISIZE, j);
+			++j;
+		}
+		
+		++ISIZE;
+	}
+	
+	print_matrix(res, ISIZE, FSIZE);
 }
+
