@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # Falten els següents problemes d'aquesta llista
-- Friend numbers
 - Old pals
 - Old teletext
 - The cask of amontillado
