@@ -3,7 +3,6 @@
 ```
 # Falten els següents problemes d'aquesta llista
 - Old pals
-- Old teletext
 - The cask of amontillado
 - Enganxat als videojocs
 - Saturday Night Fever
