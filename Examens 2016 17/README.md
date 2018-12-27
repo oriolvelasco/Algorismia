@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Camí més llarg
 - Xarxa de carreteres
 - Dues festes
 
