@@ -2,8 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- L'agenda del gran Cthulhu
-- Amistat a la xarxa
 - Un altre joc del Nim
 - Nombre d'Erdős
 
