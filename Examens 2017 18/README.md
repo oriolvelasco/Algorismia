@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Subconjunts tranquils
 - Millor que Dijkstra
 - Mediana dinàmica
 
