@@ -2,17 +2,17 @@
 #include <vector>
 using namespace std;
 
-void backtracking(int i, vector<bool>& v2, vector<int>& v, vector<vector<int> >& M, int& compt){
+void backtracking(int i, vector<int>& v, vector<vector<int> >& M, int& compt){
     if (i == M.size()) {
         for (int j = 0; j < v.size(); ++j) if (v[j] != 0) return;
         ++compt;
         return;
     }
-    v2[i] = 0;
-    backtracking(i+1, v2, v, M, compt);
-    v2[i] = 1;
+    
+    backtracking(i+1, v, M, compt);
+    
     for (int k = 0; k < M[i].size(); ++k) v[M[i][k]] = (v[M[i][k]]+1)%2;
-    backtracking(i+1, v2, v, M, compt);
+    backtracking(i+1, v, M, compt);
 }
 
 int main() {
@@ -32,9 +32,8 @@ int main() {
                 M[i].push_back(x);
             }
         }
-        vector<bool> v2(m, 0);
         int compt = 0;
-        backtracking(0, v2, v, M, compt);
+        backtracking(0, v, M, compt);
         cout << compt << endl;
     }
 }
