@@ -2,7 +2,6 @@
 - Atenció!! Llista incompleta
 ```
 # PROBLEMES QUE FALTEN
-- Clausura transitiva
 - K-èssim element
 - Traducció automàtica
 - La granota golafre
